@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #chanels {
+      display: flex;
+      justify-content: center;
+    }
+    .chanelBox {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-left: 10px;
+      width: 200px;
+      height: 200px;
+      text-align: center;
+      background: #f2f2f2;
+    }
+    button {
+      
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="chanels">
+  <div class="chanelBox">H2ODelirious<button name="subscrube" value="h2o" onclick="subscribe(this.value)">subscribe</button><button name="unsubscrube" value="h2o" onclick="unsubscribe(this.value)">unsubscribe</button></div>
+  <div class="chanelBox">VanossGaming<button name="subscrube" value="vanoss" onclick="subscribe(this.value)">subscribe</button><button name="unsubscrube" value="vanoss" onclick="unsubscribe(this.value)">unsubscribe</button></div>
+  <div class="chanelBox">BasicalyIDoWrk<button name="subscrube" value="wrk" onclick="subscribe(this.value)">subscribe</button><button name="unsubscrube" value="wrk" onclick="unsubscribe(this.value)">unsubscribe</button></div>
+  <div class="chanelBox">CaRtOoNz<button name="subscrube" value="cartoonz" onclick="subscribe(this.value)">subscribe</button><button name="unsubscrube" value="cartoonz" onclick="unsubscribe(this.value)">unsubscribe</button></div>
+  <div class="chanelBox">MiniLadd<button name="subscrube" value="mini" onclick="subscribe(this.value)">subscribe</button><button name="unsubscrube" value="mini" onclick="unsubscribe(this.value)">unsubscribe</button></div>
+</div>
+
+  <script>
+
+    var chanelsIsubTo = [];
+
+    function subscribe(resChanel) {
+      
+      for (let i = 0; i < chanelsIsubTo.length; i++){
+        if (resChanel == chanelsIsubTo[i]){
+          return;
+        }
+      }
+      chanelsIsubTo.push(resChanel);
+    }
+
+    function unsubscribe(resChanell) {
+      
+      for (let i = 0; i < chanelsIsubTo.length; i++){
+        if (resChanell == chanelsIsubTo[i]){
+          chanelsIsubTo.splice(i);
+        }
+      }
+
+    }
+
+    console.log(chanelsIsubTo);
+
+  </script>
+
+</body>
+
+</html>
