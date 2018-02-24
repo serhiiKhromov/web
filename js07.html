@@ -57,7 +57,8 @@
       
       for (let i = 0; i < chanelsIsubTo.length; i++){
         if (resChanell == chanelsIsubTo[i]){
-          chanelsIsubTo.splice(i);
+          chanelsIsubTo.splice(i, 1);
+          return;
         }
       }
 
