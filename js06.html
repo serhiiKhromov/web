@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+    }
+    #box {
+      width: 300px;
+      height: 600px;
+    }
+    #div1:nth-child(odd) {
+      background: #fff;
+    }
+    
+    #inA {
+      float: left; 
+    }
+    #inB {
+      float: right; 
+    }
+   /* p {
+      background: #f2f2f2;
+    }*/
+
+  </style>
+</head>
+
+<body>
+
+
+<div id="box">
+  <input id="inA" type="text" onclick="sendA()" value="HelloA">
+  <input id="inB" type="text" onclick="sendB()" value="HelloB">
+  <div id="div1"></div>
+</div>
+  <script>
+    var pr;
+    function sendA() {
+      let value = document.getElementById("inA").value;
+     
+      let para = document.createElement("p");
+
+      let element = document.getElementById("div1");
+      element.appendChild(para);
+      
+      element.lastChild.innerHTML = value;
+      element.lastChild.style.textAlign = "left";
+//HOW TF
+/*
+      pr = element.lastChild;
+      if (pr.previousSibling.style.background == "#f2f2f2")
+      {
+        pr.style.background = "#ffffff";
+      }
+      else {
+        pr.style.background = "#f2f2f2";
+      }*/
+    }
+
+    function sendB() {
+      let value = document.getElementById("inB").value;
+     
+      let para = document.createElement("p");
+
+      let element = document.getElementById("div1");
+      element.appendChild(para);
+
+      element.lastChild.innerHTML = value;
+      element.lastChild.style.textAlign = "right";
+//HOW TF
+/*
+      pr = element.lastChild;
+      if (pr.previousSibling.style.background == "#f2f2f2")
+      {
+        pr.style.background = "#ffffff";
+      }
+      else {
+        pr.style.background = "#f2f2f2";
+      }*/
+    }
+
+  </script>
+
+</body>
+
+</html>
