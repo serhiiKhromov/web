@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <p>4th script</p>
+
+  <button onclick="">btn</button>
+  <p id=""></p>
+
+  <script>
+    var sum = 0;
+    var Arr = [];
+    var maxNumber = 5,
+        minNumber = 1,
+        arrLength = 5;
+
+    for (let i = 0; i < arrLength; i++){
+      var a = Math.floor(Math.random() * (maxNumber-minNumber) + minNumber);
+      Arr.push(a);
+      sum += Arr[i];
+    }
+    
+    var result = sum/Arr.length;
+
+    console.log(Arr);
+    console.log(sum);
+    console.log('Result' + ' ' + result);
+
+  </script>
+
+</body>
+
+</html>
