@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <p>3rd script</p>
+  <button onclick="Add()">Add new element</button>
+  <button onclick="RemoveLast()">Remove last element</button>
+  <button onclick="Clear()">Clear all</button>
+  <button onclick="Reverse()">Reverse toggle</button>
+  <button onclick="Sort()">Sort</button>
+  <button onclick="Search()">Search</button>
+  <p id="addP"></p>
+  <script>
+
+var AddEl = [];
+
+document.getElementById("addP").innerHTML = AddEl;
+var i = 0;
+
+function Add() {
+    var el = prompt("New element", "element" + i);
+    if (el === null) {
+      return;
+    }
+    i++;
+    AddEl.push(el/*, "<br>"*/);
+    document.getElementById("addP").innerHTML = AddEl;
+}
+
+function RemoveLast() {
+    AddEl.pop();
+    document.getElementById("addP").innerHTML = AddEl; i--;
+}
+
+function Clear() {
+   for (let k in AddEl) {
+     AddEl.splice (k);
+   }
+   document.getElementById("addP").innerHTML = AddEl;
+   i = 0;
+}
+
+function Reverse() {
+    AddEl.reverse();
+    document.getElementById("addP").innerHTML = AddEl;
+}
+
+function Sort() {
+  AddEl.sort();
+    document.getElementById("addP").innerHTML = AddEl;
+}
+
+function Search() {
+  var sfor = prompt ('what are you looking for?','element2' );
+
+  for (let j in AddEl) {
+    if (AddEl[j] == sfor) {
+      alert ('you have found' + ' ' + AddEl[j]);
+      console.log(AddEl[j]);
+    }
+  }
+}
+</script>
+
+</body>
+
+</html>

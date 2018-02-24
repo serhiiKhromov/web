@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <p>1st script</p>
+  
+  <script>
+
+    var text = "https://www.instagram.com/serhii_bradbury/";
+
+    var con = text.slice(8);
+    var arrnew = con.split('/');
+    var las = arrnew[1].replace('serhii_bradbury', 'therock');
+    arrnew[1] = las;
+
+    var newstr = arrnew.join('/');
+    console.log(text + " has become " + newstr);
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <p>2nd script</p>
+  
+  <script>
+
+/*
+    var str = '12 jan 2018';
+    var arr = str.split(' ');
+
+    var yearel = arr[2].slice(2);
+    arr[2] = yearel;
+    arr[1] = '01';
+
+    var newstr = arr.join('.');
+
+    console.log(arr);
+    console.log(newstr);
+*/
+
+const month = {
+   'Jan' : '01',
+   'Feb' : '02',
+   'Mar' : '03',
+   'Apr' : '04',
+   'May' : '05',
+   'Jun' : '06',
+   'Jul' : '07',
+   'Aug' : '08',
+   'Sep' : '09',
+   'Oct' : '10',
+   'Nov' : '11',
+   'Dec' : '12'
+  };
+
+    var str = Date();
+    var arr = str.split(' ');
+
+    arr[3] = arr[3].slice(2);
+    arr[1] = month[arr[1]];
+
+    var newstr = arr.join(' ');
+    console.log(arr);
+    console.log(str);
+    console.log(newstr);
+
+  </script>
+
+</body>
+
+</html>
