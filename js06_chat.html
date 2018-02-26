@@ -15,11 +15,14 @@
       justify-content: center;
     }
     #box {
-      width: 300px;
+      width: 350px;
       height: 600px;
     }
-    #div1:nth-child(odd) {
-      background: #fff;
+    #div1 p:nth-child(even) {
+      background: #ffffff;
+    }
+	#div1 p:nth-child(odd) {
+      background: #f2f2f2;
     }
     
     #inA {
@@ -28,9 +31,6 @@
     #inB {
       float: right; 
     }
-   /* p {
-      background: #f2f2f2;
-    }*/
 
   </style>
 </head>
@@ -42,29 +42,24 @@
   <input id="inA" type="text" onclick="sendA()" value="HelloA">
   <input id="inB" type="text" onclick="sendB()" value="HelloB">
   <div id="div1"></div>
+
 </div>
   <script>
-    var pr;
+	
+	
+	
     function sendA() {
       let value = document.getElementById("inA").value;
      
       let para = document.createElement("p");
-
+	  
+	  para.style.color = "red";
+		
       let element = document.getElementById("div1");
       element.appendChild(para);
       
       element.lastChild.innerHTML = value;
       element.lastChild.style.textAlign = "left";
-//HOW TF
-/*
-      pr = element.lastChild;
-      if (pr.previousSibling.style.background == "#f2f2f2")
-      {
-        pr.style.background = "#ffffff";
-      }
-      else {
-        pr.style.background = "#f2f2f2";
-      }*/
     }
 
     function sendB() {
@@ -72,21 +67,13 @@
      
       let para = document.createElement("p");
 
+	  para.style.color = "blue";
+	  
       let element = document.getElementById("div1");
       element.appendChild(para);
 
       element.lastChild.innerHTML = value;
       element.lastChild.style.textAlign = "right";
-//HOW TF
-/*
-      pr = element.lastChild;
-      if (pr.previousSibling.style.background == "#f2f2f2")
-      {
-        pr.style.background = "#ffffff";
-      }
-      else {
-        pr.style.background = "#f2f2f2";
-      }*/
     }
 
   </script>
