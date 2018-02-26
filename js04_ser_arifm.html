@@ -13,23 +13,23 @@
   <p id=""></p>
 
   <script>
-    var sum = 0;
-    var Arr = [];
-    var maxNumber = 5,
+    let sum = 0;
+    const Arr = [];
+    const maxNumber = 5,
         minNumber = 1,
         arrLength = 5;
 
     for (let i = 0; i < arrLength; i++){
-      var a = Math.floor(Math.random() * (maxNumber-minNumber) + minNumber);
+      let a = Math.floor(Math.random() * (maxNumber-minNumber) + minNumber);
       Arr.push(a);
       sum += Arr[i];
     }
     
-    var result = sum/Arr.length;
+    const result = sum/Arr.length;
 
     console.log(Arr);
     console.log(sum);
-    console.log('Result' + ' ' + result);
+    console.log('Result ' + result);
 
   </script>
 
