@@ -23,28 +23,46 @@
       text-align: center;
       background: #f2f2f2;
     }
-    button {
-      
-    }
+
   </style>
 </head>
 
 <body>
 
 <div id="chanels">
-  <div class="chanelBox">H2ODelirious<button name="subscrube" value="h2o" onclick="subscribe(this.value)">subscribe</button><button name="unsubscrube" value="h2o" onclick="unsubscribe(this.value)">unsubscribe</button></div>
-  <div class="chanelBox">VanossGaming<button name="subscrube" value="vanoss" onclick="subscribe(this.value)">subscribe</button><button name="unsubscrube" value="vanoss" onclick="unsubscribe(this.value)">unsubscribe</button></div>
-  <div class="chanelBox">BasicalyIDoWrk<button name="subscrube" value="wrk" onclick="subscribe(this.value)">subscribe</button><button name="unsubscrube" value="wrk" onclick="unsubscribe(this.value)">unsubscribe</button></div>
-  <div class="chanelBox">CaRtOoNz<button name="subscrube" value="cartoonz" onclick="subscribe(this.value)">subscribe</button><button name="unsubscrube" value="cartoonz" onclick="unsubscribe(this.value)">unsubscribe</button></div>
-  <div class="chanelBox">MiniLadd<button name="subscrube" value="mini" onclick="subscribe(this.value)">subscribe</button><button name="unsubscrube" value="mini" onclick="unsubscribe(this.value)">unsubscribe</button></div>
+  <div class="chanelBox">H2ODelirious<button name="subscribe" value="h2o" onclick="sOu(event)">subscribe</button></div>
+  <div class="chanelBox">VanossGaming<button name="subscribe" value="vanoss" onclick="sOu(event)">subscribe</button></div>
+  <div class="chanelBox">BasicallyIDoWrk<button name="subscribe" value="wrk" onclick="sOu(event)">subscribe</button></div>
+  <div class="chanelBox">CaRtOoNz<button name="subscribe" value="cartoonz" onclick="sOu(event)">subscribe</button></div>
+  <div class="chanelBox">MiniLadd<button name="subscribe" value="mini" onclick="sOu(event)">subscribe</button></div>
 </div>
 
+  <p id="disp"></p>
+  
   <script>
 
-    var chanelsIsubTo = [];
+	var chanelsIsubTo = [];
+	
+  function sOu(event) {
+  
+	let val = event.target.value;
+  
+       var a = chanelsIsubTo.indexOf(val);
+         if (~a){
+			chanelsIsubTo.splice(a, 1);
+			event.target.innerText='subscribe';
+			console.log(chanelsIsubTo);
+        }
+		else {
+			chanelsIsubTo.push(val);
+			event.target.innerText='unsubscribe';
+			console.log(chanelsIsubTo);
+		}
+  
+	}
+	
+ /*   function subscribe(resChanel) {
 
-    function subscribe(resChanel) {
-      
       for (let i = 0; i < chanelsIsubTo.length; i++){
         if (resChanel == chanelsIsubTo[i]){
           return;
@@ -63,8 +81,8 @@
       }
 
     }
-
-    console.log(chanelsIsubTo);
+*/
+   // console.log(chanelsIsubTo);
 
   </script>
 
