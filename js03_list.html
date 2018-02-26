@@ -24,11 +24,11 @@ var i = 0;
 
 function Add() {
     var el = prompt("New element", "element" + i);
-    if (el === null) {
+    if (!el) {
       return;
     }
     i++;
-    AddEl.push(el/*"<br>"*/);
+    AddEl.push(el/*, "<br>"*/);
     document.getElementById("addP").innerHTML = AddEl;
 }
 
@@ -38,9 +38,7 @@ function RemoveLast() {
 }
 
 function Clear() {
-   for (let k in AddEl) {
-     AddEl.splice (k);
-   }
+      AddEl = []
    document.getElementById("addP").innerHTML = AddEl;
    i = 0;
 }
