@@ -1,0 +1,85 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+    list-style: none;
+    transition: 0.3s;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(OpenSans-Bold.ttf);
+}
+
+body {
+    font-family: "Roboto";
+    padding: 50px;
+    font-size: 12px;
+    line-height: 1;
+    background: rgb(52, 57, 63);
+}
+
+#menu {
+    width: 200px;
+    cursor: pointer;
+    border: 1px solid rgb(32, 35, 39);
+    color: #f2f2f2;
+}
+
+.menuElement {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: rgb(110, 121, 134);
+    border-top: 1px solid rgb(112, 125, 139);
+    border-bottom: 1px solid rgb(32, 35, 39);
+    box-shadow: inset 0px -60px 40px -40px rgb(56, 62, 68);
+}
+
+.menuElement:hover {
+    background: rgb(122, 136, 151);
+    box-shadow: inset 0px -60px 40px -40px rgb(63, 70, 77);
+}
+
+#menu ul li {
+    padding: 10px 10px;
+    background: rgb(208, 216, 226);
+    border-top: 1px solid rgb(219, 226, 233);
+    border-bottom: 1px solid rgb(162, 175, 194);
+    color: #444;
+}
+
+#menu ul {
+    display: none;
+}
+
+#menu ul.active {
+    display: block;
+}
+
+.icon-friends {
+    background-position: 0px 0px;
+}
+
+.icon-videos {
+    background-position: 0px -12px;
+}
+
+.icon-photos {
+    background-position: 0px -24px;
+}
+
+.icon-podcasts {
+    background-position: 0px -36px;
+}
+
+[class*="icon-"] {
+    display: block;
+    float: left;
+    margin-right: 10px;
+    width: 12px;
+    height: 12px;
+    background-image: url("4_icons.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
