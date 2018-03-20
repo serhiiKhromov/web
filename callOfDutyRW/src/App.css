@@ -1,0 +1,63 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #222;
+  height: 100px;
+  padding: 5px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.gameField {
+  width: 90vw;
+  height: 50vh;
+  margin: 20px auto;
+  background: #d8d8d8;
+  border: 1px solid #afafaf;
+  padding: 4px;
+}
+
+.enemy {
+  width: 80px;
+  background: rgb(32, 32, 32);
+  animation: move 2s infinite; 
+  -moz-animation: move 2s infinite; 
+  -webkit-animation: move 2s infinite; 
+  -o-animation: move 2s infinite; 
+}
+.enemyBody {
+  height: 80px;
+  width: 80px;
+  background: #f44;
+}
+.enemyHealth {
+  height: 10px;
+  width: 80px;
+  background: #4f4;
+}
+
+@keyframes move {
+  0% { opacity: 0.5; 
+       transform: translate(0px);
+  }
+  25% { opacity: 0.9; 
+    transform: rotate(30deg) translate(300px)/*   translate(200px) */;
+  }
+  50% { opacity: 0.5; 
+        transform:translate(200px) rotate(0deg) translate(300px);
+  }
+  75% { opacity: 0.9; 
+    transform: /* rotate(30deg)  */translate(300px);
+  }
+  90% { opacity: 0.5; 
+         transform:  /* rotate(100deg) */ translate(0px);
+  }
+  100% { opacity: 0.5; 
+    transform: translate(0px);
+}
+}
