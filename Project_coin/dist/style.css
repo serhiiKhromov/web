@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.coin {
+    height: 128px;
+    width: 128px;
+    background-image: url('coin_trimmed2.png');
+    background-position: 0 0;
+}
